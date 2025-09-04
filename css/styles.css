@@ -1,0 +1,49 @@
+:root {
+  --radius: 14px;
+}
+
+html, body { height: 100%; }
+
+/* Nav links */
+.nav-link {
+  @apply px-3 py-2 rounded-xl text-neutral-300 hover:text-white hover:bg-white/5 ring-1 ring-transparent hover:ring-white/5;
+}
+
+/* Buttons */
+.btn-primary {
+  @apply h-11 rounded-2xl bg-gradient-to-r from-fuchsia-500 to-indigo-500 px-4 font-semibold text-white shadow-glow hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-fuchsia-400/60;
+}
+.btn-secondary {
+  @apply h-11 rounded-2xl bg-white/5 px-4 font-medium text-white/90 ring-1 ring-white/10 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-fuchsia-400/40;
+}
+
+/* Inputs */
+.filter-input {
+  @apply h-10 w-24 rounded-xl bg-neutral-900/70 ring-1 ring-white/5 px-2 text-sm focus:outline-none focus:ring-2 focus:ring-fuchsia-500/60;
+}
+.theme-btn {
+  @apply inline-flex items-center justify-center h-9 w-9 rounded-xl text-base text-neutral-200 hover:bg-white/10;
+}
+.theme-btn.active { @apply bg-white/10; }
+
+/* Carousel */
+.carousel-btn { @apply inline-flex h-9 w-9 items-center justify-center rounded-xl bg-white/5 ring-1 ring-white/10 hover:bg-white/10; }
+
+/* Hide default scrollbar for rows */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Line clamp utility (in case Tailwind plugin not present) */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Card hover lift */
+.card:hover { transform: translateY(-2px); }
+.card { transition: transform .18s ease, box-shadow .18s ease; }
+
+/* Smooth focus ring on keyboard use */
+:focus-visible { outline: none; box-shadow: 0 0 0 2px rgba(217, 70, 239, .55) inset !important; }
